@@ -1,0 +1,38 @@
+
+You have to simulate a beverage machine that can produce tea, coffee, or water. When the user 
+specifies what she wants, the machine produces the specified cup of beverage. Each cup has a unique
+id. Unlike water (water has zero calories), coffee and tea may cause health problems. Thus, the beverage 
+machine wants to keep track of the total number of cups sold for beverages that may cause health 
+problems. You have to do this using ONE ArrayList. If the user wants, she can also get the beverage
+machine to check the amount of calories in the beverage cup she just bought. The beverage machine 
+should check this value only for tea and coffee, and should accept only tea cups or coffee cups. The 
+beverage machine calls the corresponding method in the beverage cup to get the calorie count. How 
+calorie count is calculated differs between tea and coffee. Each beverage cup should also have a 
+method to print out the type of beverage that is inside it. The user can even check the total number of 
+tea and coffee cups produced by the beverage machine.
+Here are the accepted user inputs:
+
+0 <beverage name> – produce a beverage. <beverage name> could be tea coffee water
+1 – calculate and print the calories included in the cup that was returned to customer
+2 – print the number of tea+ coffee cups produced
+Anything else – print invalid input PTO
+
+Use the following pseudo code as a starting point:
+Public class BeverageMachineDemo{
+    Psvm{
+        //create a beverage machine
+        // take console input
+        //if 0 <beverage name>
+                Get the beverage machine to produce the beverage
+                print its name to console
+        // If 1
+                Get the beverage machine to calculate the amount of calories in the cup that it 
+                last produced.
+                Print this value to the console
+        // If 3
+                Get the beverage machine to return the number of coffee+tea cups it produced
+                Print this value to the console
+        //if anything else
+                //print “invalid input”
+    }
+}
