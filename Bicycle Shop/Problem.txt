@@ -1,0 +1,55 @@
+
+You are simulating a bicycle shop. This shop sells both motor bicycles and foot bicycles. Foot bicycles 
+in turn can be either adult foot bicycles or kids foot bicycles. Each bicycle has a color. In addition, 
+motor bicycles have a unique engine number, which is an integer value.  Each foot bicycle has a bell. 
+Adult bicycle has a lamp, and kids bicycle has a pair of stabilizers. For simplicity in your code, simply 
+represent the bell, lamp, and the stabilizers using string variables.
+
+This shop has two divisions, an assemble division and a quality check division. Each of these divisions 
+has a unique name. When a user orders a bicycle, the bicycle shop requests the assemble division to 
+assemble a new bicycle. Upon this request, the assemble division creates a new bicycle and returns to the 
+bicycle shop. If the created bicycle is a motor bicycle or a kids bicycle, its quality should be checked. 
+For this, the bicycle shop passes the newly created bicycle to the quality check division. The quality check 
+division calls the getQuality() method of the bicycle object. However, how the getQuality() method is 
+implemented depends on the bicycle type.
+
+The bicycle shop should keep track of all the bicycles that underwent the quality check. To record this 
+information, it should maintain a HashMap of the form<Quality_checked_bicycle_object, qc _result (boolean)>.
+User input should be taken in the following format: 0 <bicycle_type>, and the string bicycle_type is 
+passed to the bicycle shop, which in turn passes that value to the assemble division. Based on the value 
+of this string variable, the assemble division creates the bicycle. For example, if the user input is 
+"0 MotorBicycle", the assemble division creates a motor bicycle.
+
+start-up code
+public class Demo {
+	private static Scanner userInput;
+
+	public static void main(String[] args) {
+		BicycleShop shop = new BicycleShop();
+		
+         while(true) {			
+	        System.out.println("Enter Value");
+	        userInput = new Scanner(System.in);
+
+	        while(!userInput.hasNext());
+
+	        String s = "";
+	        if (userInput.hasNext()) s = userInput.nextLine();
+	       
+	        if(s.startsWith("0")){				
+		  if (s.length()>2) {// the input string may contain bicycle type
+		  // extract the bicycle type and pass to the corresponding method in BicycleShop object
+		  //print the color of the created bicycle
+		}
+			}			
+			else{
+				System.out.println("invalid input "+s);
+			}		
+
+	        if (!s.equals("")) {
+	            //main code
+	        }	       
+	    }	
+	}
+}
+
